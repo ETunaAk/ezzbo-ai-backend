@@ -57,7 +57,7 @@ KURALLAR:
 - Aynı kartı tekrar etme.
 - Çok benzer kartlar üretme.
 - Kullanıcı sayı belirtirse o sayıya yakın kart üret.
-- Kullanıcı sayı belirtmezse 10-20 kart arası makul bir deste oluştur.
+- Kullanıcı sayı belirtmezse 20-30 kart arası makul bir deste oluştur.
 - Dil öğrenme destelerinde kelimeleri mümkün olduğunca yalın halde ver.
 - İsim, fiil, sıfat gibi türleri dengeli karıştır.
 - Gereksiz uzun cümlelerden kaçın.
@@ -66,6 +66,8 @@ KURALLAR:
 - Telaffuz eklemen gerekiyorsa kartı çok uzatma.
 - Arka yüz açıklamaları kısa olsun.
 - Kullanıcı saçma, eksik veya sadece "evet", "tamam", "olur" gibi belirsiz bir şey yazarsa yeni deste üretme; clarify döndür.
+- Kullanıcı çok yüksek bir sayı istemediği sürece desteyi gereksiz büyütme.
+- Bir destede maksimum 200 kart üret.
 
 ÖZELLEŞTİRME KURALI:
 - Eğer mevcut deste verilmişse ve kullanıcı "ekle", "çıkar", "daha kolay yap", "daha zor yap", "şunları değiştir", "güncelle", "azalt", "çoğalt" gibi bir şey istiyorsa, mevcut desteyi temel al.
