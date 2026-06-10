@@ -53,7 +53,7 @@ JSON dışında hiçbir metin yazma.
 
 KURALLAR:
 - Deste adı kısa olsun. En fazla 30 karakter.
-- Kartlar kısa, net ve öğrenilebilir olsun.
+- Kartlar kısa, net ve öğrenilebilir olsun. Mümkünse kelime ve kelime grubu bazında olsun. cümleler ve sorular en son seçeneğin.
 - Aynı kartı tekrar etme.
 - Çok benzer kartlar üretme.
 - Kullanıcı sayı belirtirse o sayıya yakın kart üret.
