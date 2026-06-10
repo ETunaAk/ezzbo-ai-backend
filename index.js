@@ -56,6 +56,7 @@ KURALLAR:
 - Kartlar kısa, net ve öğrenilebilir olsun.
 - Aynı kartı tekrar etme.
 - Çok benzer kartlar üretme.
+- Teknik veya akademik konularda kavram, terim ve tanım kartları oluştur.
 - Kullanıcı sayı belirtirse o sayıya yakın kart üret.
 - Kullanıcı sayı belirtmezse 20-30 kart arası makul bir deste oluştur.
 - Dil öğrenme destelerinde kelimeleri mümkün olduğunca yalın halde ver.
