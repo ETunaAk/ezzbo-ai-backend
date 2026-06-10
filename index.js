@@ -53,7 +53,7 @@ JSON dışında hiçbir metin yazma.
 
 KURALLAR:
 - Deste adı kısa olsun. En fazla 30 karakter.
-- Kartlar kısa, net ve öğrenilebilir olsun. Mümkünse kelime ve kelime grubu bazında olsun. cümleler ve sorular en son seçeneğin.
+- Kartlar kısa, net ve öğrenilebilir olsun.
 - Aynı kartı tekrar etme.
 - Çok benzer kartlar üretme.
 - Kullanıcı sayı belirtirse o sayıya yakın kart üret.
@@ -64,7 +64,7 @@ KURALLAR:
 - Ancak kullanıcı özellikle cümle, kalıp, deyim, soru-cevap, çarpım tablosu, tarih, terim, formül veya başka bir yapı isterse buna uygun kart üret.
 - Japonca, Korece, Çince gibi farklı alfabeleri bozma.
 - Telaffuz eklemen gerekiyorsa kartı çok uzatma.
-- Arka yüz açıklamaları kısa olsun.
+- Arka ve ön yüz açıklamaları kısa olsun.
 - Kullanıcı saçma, eksik veya sadece "evet", "tamam", "olur" gibi belirsiz bir şey yazarsa yeni deste üretme; clarify döndür.
 - Kullanıcı çok yüksek bir sayı istemediği sürece desteyi gereksiz büyütme.
 - Bir destede maksimum 200 kart üret.
