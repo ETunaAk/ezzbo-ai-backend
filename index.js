@@ -54,6 +54,9 @@ JSON dışında hiçbir metin yazma.
 KURALLAR:
 - Deste adı kısa olsun. En fazla 30 karakter.
 - Kartlar kısa, net ve öğrenilebilir olsun.
+- Teknik/tarih/fen konularında kavram + çok kısa tanım üret.
+- onYuz en fazla 6 kelime, arkaYuz en fazla 12 kelime olsun.
+- Uzun açıklama ve paragraf yazma.
 - Aynı kartı tekrar etme.
 - Çok benzer kartlar üretme.
 - Teknik veya akademik konularda kavram, terim ve tanım kartları oluştur.
@@ -109,13 +112,28 @@ ${mesaj}
 
     console.log("RAW:", text);
     res.json(JSON.parse(text));
-  } catch (e) {
-    console.error(e.response?.data || e.message);
+    } catch (e) {
+      const errorData = e.response?.data?.error;
 
-    res.status(500).json({
-      error: "Bir hata oluştu.",
-    });
-  }
+      console.error(e.response?.data || e.message);
+
+      if (errorData?.code === 429) {
+        const retryMatch = errorData.message?.match(/retry in ([0-9.]+)s/i);
+        const retrySeconds = retryMatch
+          ? Math.ceil(Number(retryMatch[1]))
+          : 60;
+
+        return res.status(429).json({
+          error: "quota",
+          retrySeconds,
+          userMessage: `Yapay zeka limiti doldu. Yaklaşık ${retrySeconds} saniye sonra tekrar deneyebilirsin.`,
+        });
+      }
+
+      return res.status(500).json({
+        error: "Bir hata oluştu.",
+      });
+    }
 });
 
 const PORT = process.env.PORT || 3000;
